@@ -4,17 +4,17 @@
 {% block title %} Detail {% endblock %}
 
 {% block content %}
-    <h1>Class {{ sp.class_name|lower|safe }}</h1>
+    <h1>Class {{ Classes.class_name|lower|safe }}</h1>
     <ul>
         <h4>List of courses are:</h4>
-        {% for course in sp.course.all %}
-            <li> {{ course.course_name }}</li>
+        {% for course in Classes.course.all %}
+            <li> {{ course }}</li>
         {% endfor %}
     </ul>
     <ul>
         <h4>List of students are:</h4>
-        {% for student in sp.student.all %}
-            <li> {{ student.student_name }}</li>
+        {% for student in Classes.student.all %}
+            <li> {{ student }}</li>
         {% endfor %}
     </ul>
 
